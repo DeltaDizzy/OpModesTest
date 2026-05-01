@@ -7,9 +7,11 @@ package first.robot;
 import org.wpilib.driverstation.DefaultUserControls;
 import org.wpilib.driverstation.UserControlsInstance;
 import org.wpilib.framework.OpModeRobot;
+import org.wpilib.hardware.rotation.DutyCycle;
+import org.wpilib.hardware.rotation.DutyCycleEncoder;
 
 
-import first.robot.subsystems.Drive;
+//import first.robot.subsystems.Drive;
 
 /**
  * The methods in this class are called automatically as described in the OpModeRobot documentation.
@@ -20,13 +22,14 @@ import first.robot.subsystems.Drive;
  */
 @UserControlsInstance(DefaultUserControls.class)
 public class Robot extends OpModeRobot {
-  public Drive drive;
+  //public Drive drive;
+  DutyCycleEncoder encoder = new DutyCycleEncoder(new DutyCycle(0));
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
   public Robot() {
-    drive = new Drive();
+    //drive = new Drive();
   }
 
   /** This function is called exactly once when the DS first connects. */
